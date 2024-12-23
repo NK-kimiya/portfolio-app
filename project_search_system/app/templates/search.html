@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Search Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
 </head>
-<body>
-    <form action="{% url 'search' %}" method="post">
+<body style="background-color: #f0f8ff;">
+    <form action="{% url 'search' %}" method="post" style="width: 500px; margin: 20px auto;">
         {% csrf_token %}
-        <input type="text" name="query">
-        <button type="submit">Search</button>
+        <textarea type="text" name="query" style=" display: block; width: 100%;" placeholder="(例)ライブ配信ができるサービスを作成したいです。"></textarea>
+        <small>※30文字以内</small>
+        <button type="submit" style=" display: block; width: 200px; padding: 5px 20px; margin: 5px auto; background-color: #1e90ff; border: none; color: white; text-align: center;">分析</button>
     </form>
+    {% if predicted_category %}
+    <h2 style="text-align: center;">分析結果</h2>
+    <p style="color: #87cefa; font-size: 80px; text-align: center;">{{ predicted_probability|floatformat:2 }}%</p>
+    
+    {% for obj in matching_project%}
+    <p style="text-align: center; font-size: 40px;">{{obj.title}}</p>
+    <p style="width: 300px; margin: 30px auto;">{{obj.text}}</p>
+    <div style="width: 300px; margin: 20px auto; display: flex;">
+        <p style="font-size: 30px;">{{obj.subheading1}}:</p>
+        <a href="{{obj.url1}}" style="font-size: 30px;">{{obj.url1}}</a>
+    </div>
+    {% endfor %}
+    <p></p>
+    {% endif %}
+
 </body>
+
 </html>
