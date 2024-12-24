@@ -1,0 +1,72 @@
+#project-search-page {
+    background-color:#f0f8ff ;
+}
+
+#search-form-wrap {
+    width: 500px; 
+    margin: 20px auto;
+}
+
+#form-text {
+    display: block; 
+    width: 100%;
+}
+
+#form-button {
+    display: block; 
+    width: 200px; 
+    padding: 5px 20px; 
+    margin: 5px auto; 
+    background-color: #1e90ff; 
+    border: none; 
+    color: white; text-align: center;
+}
+
+.search-result-content {
+    width: 500px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.search-project-title {
+    text-align: center; 
+    font-size: 40px;
+}
+
+.search-project-text {
+    width: 300px; 
+    margin: 30px auto;
+}
+
+.content-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-heading {
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.item-link {
+    display: block;
+    width: 400px;
+}
+
+#label-prediction-percentage-area {
+    width: 500px;
+    margin: 15px auto;
+}
+
+#area-tile-sentence {
+    text-align: center;
+}
+
+#percentage-display-sentence {
+    color: #87cefa; 
+    font-size: 80px; 
+    text-align: center;
+}
+
