@@ -57,7 +57,8 @@
 
 #label-prediction-percentage-area {
     width: 500px;
-    margin: 15px auto;
+    margin: 50px auto;
+    text-align: center;
 }
 
 #area-tile-sentence {
@@ -65,8 +66,44 @@
 }
 
 #percentage-display-sentence {
-    color: #87cefa; 
-    font-size: 80px; 
-    text-align: center;
+    display: none;
 }
 
+svg {
+    display: block;
+    margin: 30px auto;
+    transform: rotate(-90deg);
+    /* SVGを90度反時計回りに回転させ、プログレスが上から始まるようにします */
+    transform-origin: center;
+    /* SVGを中心に回転 */
+}
+
+.progress-ring__circle {
+    stroke-dasharray: 440;
+    /* 円周の長さ */
+    stroke-dashoffset: 440;
+    /* 円全体を非表示にする初期値 */
+    stroke-width: 10;
+    fill: none;
+    stroke: #87cefa;
+}
+
+.background-ring {
+    fill: none;
+    stroke: lightgrey;
+    stroke-width: 10;
+}
+
+.progress-text {
+    fill: #87cefa;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    text-anchor: middle;
+    /* テキストを中心に配置 */
+    alignment-baseline: middle;
+    /* 垂直方向の中心に配置 */
+    transform: rotate(90deg);
+    /* SVG全体の回転を打ち消して、テキストを横向きに戻す */
+    transform-origin: center;
+    /* 中心を基点に回転 */
+}
