@@ -1,4 +1,8 @@
-#project-search-page {
+html,#project-search-page {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
     background-color:#f0f8ff ;
 }
 
@@ -71,18 +75,15 @@
 
 svg {
     display: block;
+    width: 100%;
     margin: 30px auto;
     transform: rotate(-90deg);
-    /* SVGを90度反時計回りに回転させ、プログレスが上から始まるようにします */
     transform-origin: center;
-    /* SVGを中心に回転 */
 }
 
 .progress-ring__circle {
     stroke-dasharray: 440;
-    /* 円周の長さ */
     stroke-dashoffset: 440;
-    /* 円全体を非表示にする初期値 */
     stroke-width: 10;
     fill: none;
     stroke: #87cefa;
@@ -99,11 +100,49 @@ svg {
     font-size: 20px;
     font-family: 'Arial', sans-serif;
     text-anchor: middle;
-    /* テキストを中心に配置 */
     alignment-baseline: middle;
-    /* 垂直方向の中心に配置 */
     transform: rotate(90deg);
-    /* SVG全体の回転を打ち消して、テキストを横向きに戻す */
     transform-origin: center;
-    /* 中心を基点に回転 */
+}
+
+@media (max-width: 600px) {
+    #search-form-wrap {
+        width: 80%; 
+        margin: 20px auto;
+    }
+
+    #form-text {
+        width: 100%;
+    }
+
+    #form-button {
+        width: 80%; 
+        margin: 5px auto; 
+    }
+
+    .search-result-content {
+        width: 80%;
+    }
+
+    .search-project-text {
+        width: 80%;
+    }
+
+    .item-heading {
+        width: 80%;
+    }
+
+    .item-link {
+        width: 80%;
+    }
+
+    #label-prediction-percentage-area {
+        width: 80%;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
