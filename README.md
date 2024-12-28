@@ -57,3 +57,11 @@ BertForSequenceClassification
 
 <p>2:Fine-tuning is performed with the prepared text file and the model is saved in the model_transformers folder.</p>
 <p>executable file:data_learning.ipynb</p>
+
+<h5>Usage environment</h5>
+<ul>
+  <li>OS：Windows11</li>
+  <li>CPU：Core i7</li>
+  <li>RAM：8GB</li>
+  <li>GPU：NVIDIA GeForce RTX 3060 Ti</li>
+</ul>
